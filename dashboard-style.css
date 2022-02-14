@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 @font-face {
     font-family: 'open_sansregular';
     src: url('opensans-regular-webfont.woff2') format('woff2'),
@@ -17,14 +19,82 @@ html, body {
     grid-template-rows: 1fr 4fr;
     height: 100vh;
     width: 100vw;
-    font-family: 'open_sansregular';
-    font-stretch: condensed;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .header {
     background-color: #f8fafc;
     grid-column: 2/3;
     grid-row: 1/2;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid black;
+}
+
+.top-header {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    justify-items: start;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.search-bar label {
+    display: grid;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 70%;
+    border-radius: 15px;
+    border: 1px solid black;
+    height: 1.5rem;
+    padding: 10px;
+}
+
+.profile-div {
+    display: grid;
+    grid-template-columns: 24px 40px 1fr;
+    column-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.profile-icon {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.bottom-header {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.welcome-div {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.new-messages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    align-items: center;
 }
 
 .sidebar {
@@ -33,13 +103,14 @@ html, body {
     grid-row: 1/3;
     display: grid;
     grid-template-rows: 1.5fr 1fr;
+    padding: 10px;
+    padding-top: 15px;
 }
 
 .nav {
     display: grid;
     grid-template-rows: 1fr 6fr 3fr;
     row-gap: 30px;
-    padding: 10px;
 }
 
 .home {
@@ -95,4 +166,5 @@ a:link {
     background-color: #f1f5f9;
     grid-column: 2/3;
     grid-row: 2/3;
+    padding: 15px;
 }
